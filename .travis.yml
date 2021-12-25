@@ -1,4 +1,0 @@
-language: cpp
-script:
-  - g++ --version
-  - g++ -Wall -Wextra -pedantic hello.cpp && ./a.out
