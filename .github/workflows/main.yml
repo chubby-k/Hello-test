@@ -45,7 +45,7 @@ jobs:
       - name: Build
         working-directory: ${{ github.workspace }}
         run: |
-          gcc -o hello hello.cpp
+          gcc -o hello hello.cpp -lstdc++
           
       - name: Test
         working-directory: ${{ github.workspace }}
