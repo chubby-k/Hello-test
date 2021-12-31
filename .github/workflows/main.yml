@@ -40,5 +40,6 @@ jobs:
         working-directory: ${{runner.workspace}}/build
         shell: bash
         run: |
-          echo $GITHUB_WORKSPACE
+          echo test build
+          echo ${GITHUB_WORKSPACE}
           
