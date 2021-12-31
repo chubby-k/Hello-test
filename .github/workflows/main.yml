@@ -35,11 +35,19 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      # Runs a set of commands using the runners shell
-      - name: Build
+      - name: Test print
         working-directory: ${{ github.workspace }}
         run: |
           echo test build
           ls -all
           ls ${{ github.workspace }}
           
+      - name: Build
+        working-directory: ${{ github.workspace }}
+        run: |
+          gcc -o hello hello.cpp
+          
+      - name: Test
+        working-directory: ${{ github.workspace }}
+        run: |
+          ./hello
